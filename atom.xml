@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://norahfang.coding.me/</id>
+    <id>https://norahfang.github.io/</id>
     <title>NorahFang</title>
-    <updated>2020-01-11T12:31:22.543Z</updated>
+    <updated>2020-01-11T12:35:26.198Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://norahfang.coding.me/"/>
-    <link rel="self" href="https://norahfang.coding.me/atom.xml"/>
+    <link rel="alternate" href="https://norahfang.github.io/"/>
+    <link rel="self" href="https://norahfang.github.io/atom.xml"/>
     <subtitle>NorahFang&apos;s blog</subtitle>
-    <logo>https://norahfang.coding.me/images/avatar.png</logo>
-    <icon>https://norahfang.coding.me/favicon.ico</icon>
+    <logo>https://norahfang.github.io/images/avatar.png</logo>
+    <icon>https://norahfang.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, NorahFang</rights>
     <entry>
         <title type="html"><![CDATA[关于我]]></title>
-        <id>https://norahfang.coding.me/post/about</id>
-        <link href="https://norahfang.coding.me/post/about">
+        <id>https://norahfang.github.io/post/about</id>
+        <link href="https://norahfang.github.io/post/about">
         </link>
         <updated>2019-07-19T10:18:01.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[几个常用的PDF工具]]></title>
-        <id>https://norahfang.coding.me/post/ji-ge-chan-yong-de-pdf-gong-ju</id>
-        <link href="https://norahfang.coding.me/post/ji-ge-chan-yong-de-pdf-gong-ju">
+        <id>https://norahfang.github.io/post/ji-ge-chan-yong-de-pdf-gong-ju</id>
+        <link href="https://norahfang.github.io/post/ji-ge-chan-yong-de-pdf-gong-ju">
         </link>
         <updated>2019-03-26T08:37:59.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[uni-app中静态页面跳转到app内部页]]></title>
-        <id>https://norahfang.coding.me/post/uni-app-zhong-jing-tai-ye-mian-tiao-zhuan-dao-app-nei-bu-ye</id>
-        <link href="https://norahfang.coding.me/post/uni-app-zhong-jing-tai-ye-mian-tiao-zhuan-dao-app-nei-bu-ye">
+        <id>https://norahfang.github.io/post/uni-app-zhong-jing-tai-ye-mian-tiao-zhuan-dao-app-nei-bu-ye</id>
+        <link href="https://norahfang.github.io/post/uni-app-zhong-jing-tai-ye-mian-tiao-zhuan-dao-app-nei-bu-ye">
         </link>
         <updated>2019-03-01T09:45:33.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[2017年的一个企业官网视觉规范v1.0]]></title>
-        <id>https://norahfang.coding.me/post/2017-nian-de-yi-ge-qi-ye-guan-wang-shi-jue-gui-fan-v10</id>
-        <link href="https://norahfang.coding.me/post/2017-nian-de-yi-ge-qi-ye-guan-wang-shi-jue-gui-fan-v10">
+        <id>https://norahfang.github.io/post/2017-nian-de-yi-ge-qi-ye-guan-wang-shi-jue-gui-fan-v10</id>
+        <link href="https://norahfang.github.io/post/2017-nian-de-yi-ge-qi-ye-guan-wang-shi-jue-gui-fan-v10">
         </link>
         <updated>2018-11-10T08:31:37.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[用qrcode生成二维码，canvas合成H5海报]]></title>
-        <id>https://norahfang.coding.me/post/qrccode-canvas-h5</id>
-        <link href="https://norahfang.coding.me/post/qrccode-canvas-h5">
+        <id>https://norahfang.github.io/post/qrccode-canvas-h5</id>
+        <link href="https://norahfang.github.io/post/qrccode-canvas-h5">
         </link>
         <updated>2018-11-05T07:28:50.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[【腾讯云对象存储COS】 每月免费50G存储和10GB外链流量认证申请及使用教程]]></title>
-        <id>https://norahfang.coding.me/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng</id>
-        <link href="https://norahfang.coding.me/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng">
+        <id>https://norahfang.github.io/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng</id>
+        <link href="https://norahfang.github.io/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng">
         </link>
         <updated>2018-11-05T02:35:36.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[备份项目文件夹命名整理]]></title>
-        <id>https://norahfang.coding.me/post/bei-fen-xiang-mu-wen-jian-jia-ming-ming-zheng-li</id>
-        <link href="https://norahfang.coding.me/post/bei-fen-xiang-mu-wen-jian-jia-ming-ming-zheng-li">
+        <id>https://norahfang.github.io/post/bei-fen-xiang-mu-wen-jian-jia-ming-ming-zheng-li</id>
+        <link href="https://norahfang.github.io/post/bei-fen-xiang-mu-wen-jian-jia-ming-ming-zheng-li">
         </link>
         <updated>2018-11-01T08:53:57.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[clover+懒人版黑苹果安装（e3+970）]]></title>
-        <id>https://norahfang.coding.me/post/cloverlan-ren-ban-hei-ping-guo-an-zhuang-e3970</id>
-        <link href="https://norahfang.coding.me/post/cloverlan-ren-ban-hei-ping-guo-an-zhuang-e3970">
+        <id>https://norahfang.github.io/post/cloverlan-ren-ban-hei-ping-guo-an-zhuang-e3970</id>
+        <link href="https://norahfang.github.io/post/cloverlan-ren-ban-hei-ping-guo-an-zhuang-e3970">
         </link>
         <updated>2017-04-08T02:52:38.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[自建谷歌字体本地CDN加速]]></title>
-        <id>https://norahfang.coding.me/post/zi-jian-gu-ge-zi-ti-ben-di-cdn-jia-su</id>
-        <link href="https://norahfang.coding.me/post/zi-jian-gu-ge-zi-ti-ben-di-cdn-jia-su">
+        <id>https://norahfang.github.io/post/zi-jian-gu-ge-zi-ti-ben-di-cdn-jia-su</id>
+        <link href="https://norahfang.github.io/post/zi-jian-gu-ge-zi-ti-ben-di-cdn-jia-su">
         </link>
         <updated>2016-11-18T04:03:03.000Z</updated>
     </entry>
     <entry>
         <title type="html"><![CDATA[Git基本命令]]></title>
-        <id>https://norahfang.coding.me/post/git-ji-ben-ming-ling</id>
-        <link href="https://norahfang.coding.me/post/git-ji-ben-ming-ling">
+        <id>https://norahfang.github.io/post/git-ji-ben-ming-ling</id>
+        <link href="https://norahfang.github.io/post/git-ji-ben-ming-ling">
         </link>
         <updated>2016-10-25T11:43:48.000Z</updated>
     </entry>
