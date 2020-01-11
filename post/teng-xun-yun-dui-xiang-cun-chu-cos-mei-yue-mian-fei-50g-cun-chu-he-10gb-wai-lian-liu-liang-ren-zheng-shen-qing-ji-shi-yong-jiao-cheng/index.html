@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="NorahFang&#39;s blog">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>【腾讯云对象存储COS】 每月免费50G存储和10GB外链流量认证申请及使用教程 | NorahFang</title>
+<link href="https://norahfang.coding.me//styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async type="text/javascript" src="https://norahfang.coding.me//media/scripts/search.js"></script>
+<script type="text/javascript">
+$(document).pjax('a[target!=_blank]', '#pjax-container', {
+	fragment: '#pjax-container',
+	timeout: 5000,
+	cache: false
+});
+$(document).on('pjax:complete', function(){  	
+	pjax();
+});
+
+$(window).on('popstate.pjax', function () {
+	pjax();
+})
+
+function pjax() {
+	$.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+
+	if (("#gitalk-container").length > 0 ) {
+	$('#mememe').attr('src','//source.unsplash.com/800x400/?arts,weather?'+Math.random());
+	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
+	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js");
+	$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    	});
+	}
+}
+</script>
+
+  </head>
+
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" style="display:inline-block;" src="https://norahfang.coding.me//images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+          <h1 title="NorahFang" class="weaklink"><a  href="/">NorahFang</a>
+
+          </h1>
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://NorahFang.github.io/post/about/" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+<!--<div class="search">
+    <i class="search-icon fa fa-search search-start"></i>
+    <input type="text" class="search-input" placeholder="Searching..." />
+    <i class="search-icon fa fa-refresh search-clear"></i>
+	<div class="search-results"></div>
+</div>-->
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://NorahFang.github.io/post/about/" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+<style type="text/css">
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.search .search-icon {
+    float: right;
+    height: 100%;
+    margin: 0 10px;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search .search-input {
+    float: right;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.search .search-clear {
+    display: none;
+}
+
+.search .search-results {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 50%;
+    max-height: 400px;
+    overflow: auto;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 .3rem .5rem #333;
+}
+
+.search .search-results .result-item {
+    color: #000;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+</style>
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_page" >
+
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>【腾讯云对象存储COS】 每月免费50G存储和10GB外链流量认证申请及使用教程</a>
+
+
+
+    </h2>
+  </div>
+  
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info">2018-11-05</span>
+<i class="fa fa-eye"></i>
+
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://norahfang.coding.me/tag/dUVPh4e6w" class="tag">免费</a>
+
+	<a href="https://norahfang.coding.me/tag/lu8IcDBIph" class="tag">外链</a>
+
+
+</span>
+<span>2 min read</span>
+&nbsp
+&nbsp
+<i class="fa fa-share"></i>
+<a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://norahfang.coding.me/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng"><i class="fa fa-qrcode"></i></a>
+<a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://norahfang.coding.me/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng&sharesource=qzone&title=【腾讯云对象存储COS】 每月免费50G存储和10GB外链流量认证申请及使用教程&pics=https://blog.blinkstar.cn/images/avatar.png&summary="><i class="fa fa-qq"></i></a>
+<a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=https://norahfang.coding.me/post/teng-xun-yun-dui-xiang-cun-chu-cos-mei-yue-mian-fei-50g-cun-chu-he-10gb-wai-lian-liu-liang-ren-zheng-shen-qing-ji-shi-yong-jiao-cheng&sharesource=weibo&title=【腾讯云对象存储COS】 每月免费50G存储和10GB外链流量认证申请及使用教程 + " - " + &pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
+&nbsp
+&nbsp
+<a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
+&nbsp
+&nbsp
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</div>
+  </div>
+
+  <div class="post_content markdown">
+  <!-- &nbsp   随机生成图片
+  <img id="mememe" src="//source.unsplash.com/800x400/?arts,weather"> -->
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>腾讯云对象存储服务COS是腾讯云的新产品，目前给已认证的免费用户提供50 GB/月存储空间，10 GB/月外网访问流量，10 GB/月CDN回源流量，100 万次/月，读请求10 万次/月写请求。腾讯云对象存储服务存储空间还是比较大的，如果做私有网盘，用来存放自己重要文件还是挺不错。其实同样的产品还有七牛云的10G免费外链存储,实名认证需要手持身份证推荐。</p>
+<blockquote>
+<h2><strong>腾讯云对象存储服务COS注册使用教程：</strong></h2>
+<p style="text-align: center;"><a href="https://cloud.tencent.com/" target="_blank" rel="nofollow noopener noreferrer">点击进入腾讯云官方主页</a></p>
+</blockquote>
+1.进入腾讯云官网后，点击导航栏的云产品，然后再在“基础产品”中找到“存储与CDN”，点击“对象存储服务COS”进入到对象存储服务页面。
+<img class="alignnone size-full wp-image-2286" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/01.png" alt="" width="798" height="316" data-tag="bdshare" />
+<p>2.在对象存储服务COS页面，我们选择“免费体验”。</p>
+<img class="alignnone size-full wp-image-2287" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/02.png" alt="" width="563" height="250" data-tag="bdshare" />
+<p>3.在免费体验馆页面右侧在点击“免费体验”。</p>
+<img class="alignnone size-full wp-image-2288" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/03.png" alt="" width="373" height="236" data-tag="bdshare" />
+<p>4.如果你的账户没有完成实名认证，在开通云对象存储页面会提示“去实名认证”。我们点击进入。</p>
+<p><a href="https://cloud.tencent.com/"><img class="alignnone size-full wp-image-2290" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/04.png" alt="" width="465" height="102" data-tag="bdshare" /></a></p>
+<p>5.请选择个人认证。</p>
+<p><a href="https://cloud.tencent.com/"><img class="alignnone size-full wp-image-2291" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/05.png" alt="" width="527" height="326" data-tag="bdshare" /></a></p>
+<p>6.填写个人姓名和身份证号，当然必须是真实有效的。然后点击“提交审核”。只要信息准确，一般都是秒过审核。</p>
+<img class="alignnone size-full wp-image-2292" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/06.png" alt="" width="408" height="353" data-tag="bdshare" />
+<p> </p>
+<p>7.实名认证后，我们继续在导航栏的云产品中找到“对象存储服务”点击进入。</p>
+<img class="alignnone size-full wp-image-2294" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/07.png" alt="" width="370" height="168" data-tag="bdshare" />
+<p>8.然后点击“创建Bucket”。</p>
+<img class="alignnone size-large wp-image-2295" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/08.png" alt="" width="1024" height="253" data-tag="bdshare" />
+<p>9.填写创建Bucket的相关信息。如果你要外链下载的请选择“公有读私有写”。</p>
+<img class="alignnone size-full wp-image-2296" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/09.png" alt=""  data-tag="bdshare" />
+<p>10.创建好后点击左侧导航栏的“Bucket列表”，选择你自己创建的Bucket，点击进入。</p>
+<img class="alignnone size-full wp-image-2297" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/10.png" alt="" width="379" height="171" data-tag="bdshare" />
+<p>11.点击上传文件，可以上传本地文件或文件夹。</p>
+<img class="alignnone size-full wp-image-2298" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/11.png" alt="" width="843" height="390" data-tag="bdshare" />
+<p>12.上传之后，右上角刷新上有个红的表示上传成功，点击“刷新”，就能查看到你上传的文件。</p>
+<img class="alignnone size-full wp-image-2299" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/12.png" alt="" width="320" height="78" data-tag="bdshare" />
+<p>13.如何获取外链？点击你上传文件后的“文件信息”，然后可以查看到“文件链接”就是该文件的外链地址。</p>
+<img class="alignnone size-full wp-image-2300" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/13.png" alt="" width="805" height="396" data-tag="bdshare" />
+<p>14.如何设置防盗链。点击“配置配置”进行设置即可。</p>
+<img class="alignnone size-full wp-image-2301" src="https://zabolg-1257958181.cos.ap-shanghai.myqcloud.com/zablog/QCloud/14.png" alt="" />
+</span></p></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">NorahFang</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2018-11-05</div>    
+	  
+    <!--<p class="md_block"> <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="https://norahfang.coding.me//media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="https://norahfang.coding.me//media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div><div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>  </p> -->
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<script>
+var link = "" ;
+$("img").each( (i,o) => {
+	var o = $(o);
+	if( o.attr("src").indexOf("sinaimg") > 0 || o.attr("src").indexOf("qpic") > 0 || o.attr("src").indexOf("baidu") > 0 || o.attr("src").indexOf("sinaimg") > 0){
+		o.attr("referrerpolicy","no-referrer");
+		link = o.attr("src");
+		o.attr("src",link);
+	}
+});
+</script>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:16px;width:50%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
+            下一篇
+            <a href="https://norahfang.coding.me/post/bei-fen-xiang-mu-wen-jian-jia-ming-ming-zheng-li">
+             备份项目文件夹命名整理
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:16px;width:50%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
+            上一篇
+            <a href="https://norahfang.coding.me/post/qrccode-canvas-h5">
+                用qrcode生成二维码，canvas合成H5海报
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+          
+			<div id="gitalk-container"></div>
+            <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+<script>
+  var gitalk = new Gitalk({
+    clientID: '09697438a3579aa7a5ae',
+    clientSecret: 'c11f4d89a14dc3c480b3cfcba07941a6103929ed',
+    repo: 'NorahFang.github.io',
+    owner: 'NorahFang',
+    admin: ['NorahFang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+          
+			  
+          
+        
+</div>
+
+  </div>
+</div>
+
+
+      </div>
+<div class="toc-container">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.getElementById("copyright").innerHTML = "Copyright © "+year+“ ” + NorahFang;
+		</script>
+		Powered by Gridea.
+		<br>
+		本站已稳定运行了
+		<strong><script type="text/javascript">
+		var urodz= new Date("11/11/2016");
+		var now = new Date();
+		var ile = now.getTime() - urodz.getTime();
+		var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+		document.write(+dni)
+		</script>
+		</strong>天
+		<!--<br>
+		本站总访问量为 <strong><span id="busuanzi_value_site_uv"></span></strong> 次-->
+	  <br/>人间一趟，看看太阳
+      </div>
+	 <!-- <img src="https://norahfang.coding.me//media/images/font.svg">-->
+
+    </div>
+
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/love.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/darkmode.js"></script>
+<script>
+var options = {
+  bottom: '64px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#f7f7f7',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>

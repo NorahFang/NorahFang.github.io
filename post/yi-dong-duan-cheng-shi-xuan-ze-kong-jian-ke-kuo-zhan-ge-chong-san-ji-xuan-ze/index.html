@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="NorahFang&#39;s blog">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>移动端城市选择控件-可扩展各种三级选择 | NorahFang</title>
+<link href="https://norahfang.coding.me//styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script async type="text/javascript" src="https://norahfang.coding.me//media/scripts/search.js"></script>
+<script type="text/javascript">
+$(document).pjax('a[target!=_blank]', '#pjax-container', {
+	fragment: '#pjax-container',
+	timeout: 5000,
+	cache: false
+});
+$(document).on('pjax:complete', function(){  	
+	pjax();
+});
+
+$(window).on('popstate.pjax', function () {
+	pjax();
+})
+
+function pjax() {
+	$.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+
+	if (("#gitalk-container").length > 0 ) {
+	$('#mememe').attr('src','//source.unsplash.com/800x400/?arts,weather?'+Math.random());
+	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js");
+	$.getScript("//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js");
+	$('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    	});
+	}
+}
+</script>
+
+  </head>
+
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" style="display:inline-block;" src="https://norahfang.coding.me//images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+          <h1 title="NorahFang" class="weaklink"><a  href="/">NorahFang</a>
+
+          </h1>
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://NorahFang.github.io/post/about/" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+<!--<div class="search">
+    <i class="search-icon fa fa-search search-start"></i>
+    <input type="text" class="search-input" placeholder="Searching..." />
+    <i class="search-icon fa fa-refresh search-clear"></i>
+	<div class="search-results"></div>
+</div>-->
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/tags" class="selected active current nav__item" >标签</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://NorahFang.github.io/post/about/" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+<style type="text/css">
+.search {
+    position: relative;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.search .search-icon {
+    float: right;
+    height: 100%;
+    margin: 0 10px;
+    line-height: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search .search-input {
+    float: right;
+    width: 30%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.search .search-clear {
+    display: none;
+}
+
+.search .search-results {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 50%;
+    max-height: 400px;
+    overflow: auto;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 0 .3rem .5rem #333;
+}
+
+.search .search-results .result-item {
+    color: #000;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+</style>
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_page" >
+
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>移动端城市选择控件-可扩展各种三级选择</a>
+
+
+
+    </h2>
+  </div>
+  
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+
+  <div class="post_details">
+    <div class="info"><i class="fa fa-clock-o"></i>
+<span class="date_info">2016-05-18</span>
+<i class="fa fa-eye"></i>
+
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://norahfang.coding.me/tag/z8sakSbS5" class="tag">前端开发</a>
+
+
+</span>
+<span>2 min read</span>
+&nbsp
+&nbsp
+<i class="fa fa-share"></i>
+<a title="QR code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://norahfang.coding.me/post/yi-dong-duan-cheng-shi-xuan-ze-kong-jian-ke-kuo-zhan-ge-chong-san-ji-xuan-ze"><i class="fa fa-qrcode"></i></a>
+<a title="qq share" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://norahfang.coding.me/post/yi-dong-duan-cheng-shi-xuan-ze-kong-jian-ke-kuo-zhan-ge-chong-san-ji-xuan-ze&sharesource=qzone&title=移动端城市选择控件-可扩展各种三级选择&pics=https://blog.blinkstar.cn/images/avatar.png&summary="><i class="fa fa-qq"></i></a>
+<a title="weibo share" target="_blank" href="https://service.weibo.com/share/share.php?url=https://norahfang.coding.me/post/yi-dong-duan-cheng-shi-xuan-ze-kong-jian-ke-kuo-zhan-ge-chong-san-ji-xuan-ze&sharesource=weibo&title=移动端城市选择控件-可扩展各种三级选择 + " - " + &pic="https://blog.blinkstar.cn/images/avatar.png"><i class="fa fa-weibo"></i></a>
+&nbsp
+&nbsp
+<a id="daxiao" href="javascript:void(0);" onclick="change();" title="调整字体大小"><i class="fa fa-font"></i></a>
+&nbsp
+&nbsp
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</div>
+  </div>
+
+  <div class="post_content markdown">
+  <!-- &nbsp   随机生成图片
+  <img id="mememe" src="//source.unsplash.com/800x400/?arts,weather"> -->
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><h2>lArea v1.0移动端城市选择控件</h2>
+<p>纯原生js的移动端城市选择插件，不依赖任何库。</p>
+<p>可扩展为各类三级选择，包括并不局限城市选择。值得推荐。</p>
+<p><svg aria-hidden="true" class="octicon octicon-link" role="img" width="16" viewBox="0 0 16 16" version="1.1" height="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg>用法</p>
+<p>在html页面中引入input标签，写法如下：</p>
+<pre><br />...
+&lt;input id="demo1" type="text" readonly="" name="input_area" placeholder="城市选择特效"/&gt;
+...
+
+</pre>
+<p>将样式文件引入到页面中：</p>
+<pre>...
+ &lt;link rel="stylesheet" href="css/LArea.css"&gt;
+...
+</pre>
+<p>同时引入js文件到页面中：</p>
+<pre>...
+&lt;script src="js/LArea.js"&gt;&lt;/script&gt;
+...
+</pre>
+<p>初始化插件：</p>
+<pre>...
+var area = new LArea();
+area.init({
+    'trigger': '#demo1',//触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+    'valueTo':'#value1',//选择完毕后id属性输出到该位置
+    'keys':{id:'id',name:'name'},//绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+    'type':1,//数据源类型
+    'data':LAreaData//数据源
+});
+...
+</pre>
+<p>自定义数据源结构参考：</p>
+<pre>//初始化type=1时，参考下列数据源
+var LAreaData1 = [{
+         "id": "2",
+         "name": "一级",
+         "child": [{
+              "id": "21",
+              "name": "二级1",
+              "child": [{
+                  "id": "211",
+                  "name": "三级1"
+             }, {
+                 "id": "212",
+                 "name": "三级2"
+             }, {
+                 "id": "213",
+                 "name": "三级3"
+             }]
+         }, {
+             "id": "22",
+             "name": "二级2"
+         }, {
+             "id": "23",
+             "name": "二级3"
+         }]
+     }];
+
+//初始化type=2时，参考下列数据源
+var provs_data = [{
+    "text": "省",
+    "value": "1"
+}, {
+    "text": "省",
+    "value": "2"
+}];
+var citys_data = {
+    "1": [{
+        "text": "市",
+        "value": "11"
+    }, {
+        "text": "市",
+        "value": "12"
+    }],
+    "2": [{
+        "text": "市",
+        "value": "21"
+    }, {
+        "text": "市",
+        "value": "22"
+    }]
+};
+var dists_data = {
+    "11": [{
+        "text": "区",
+        "value": "111"
+    }, {
+        "text": "区",
+        "value": "112"
+    }],
+    "21": [{
+        "text": "区",
+        "value": "211"
+    }, {
+        "text": "区",
+        "value": "212"
+    }]
+};
+</pre>
+<blockquote>项目地址：<a href="https://github.com/xfhxbb/lArea" target="_blank">https://github.com/xfhxbb/lArea</a></blockquote></span></p></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">NorahFang</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2016-05-18</div>    
+	  
+    <!--<p class="md_block"> <div class="reward"><div class="reward-button">赏 <span class="reward-code"> <span class="alipay-code"> <img class="alipay-img" src="https://norahfang.coding.me//media/images/alipay.png"><b>支付宝扫码打赏</b> </span> <span class="wechat-code"> <img class="wechat-img" src="https://norahfang.coding.me//media/images/wechat.png"><b>微信打赏</b> </span> </span></div></div><div style="text-align:center;color: #ccc;font-size:14px;">如果觉得这篇文章对您有帮助，可以请作者喝一杯饮料哦🥤</div>  </p> -->
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<script>
+var link = "" ;
+$("img").each( (i,o) => {
+	var o = $(o);
+	if( o.attr("src").indexOf("sinaimg") > 0 || o.attr("src").indexOf("qpic") > 0 || o.attr("src").indexOf("baidu") > 0 || o.attr("src").indexOf("sinaimg") > 0){
+		o.attr("referrerpolicy","no-referrer");
+		link = o.attr("src");
+		o.attr("src",link);
+	}
+});
+</script>
+
+<div style="width:100%;overflow:hidden">
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:16px;width:50%;text-overflow: ellipsis;overflow: hidden;white-space: nowrap;">
+            上一篇
+            <a href="https://norahfang.coding.me/post/git-ji-ben-ming-ling">
+                Git基本命令
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+          
+			<div id="gitalk-container"></div>
+            <link href="https://cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css" rel="stylesheet">
+<script>
+  var gitalk = new Gitalk({
+    clientID: '09697438a3579aa7a5ae',
+    clientSecret: 'c11f4d89a14dc3c480b3cfcba07941a6103929ed',
+    repo: 'NorahFang.github.io',
+    owner: 'NorahFang',
+    admin: ['NorahFang'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+  gitalk.render('gitalk-container')
+</script>
+
+
+          
+			  
+          
+        
+</div>
+
+  </div>
+</div>
+
+
+      </div>
+<div class="toc-container">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.getElementById("copyright").innerHTML = "Copyright © "+year+“ ” + NorahFang;
+		</script>
+		Powered by Gridea.
+		<br>
+		本站已稳定运行了
+		<strong><script type="text/javascript">
+		var urodz= new Date("11/11/2016");
+		var now = new Date();
+		var ile = now.getTime() - urodz.getTime();
+		var dni = Math.floor(ile / (1000 * 60 * 60 * 24));
+		document.write(+dni)
+		</script>
+		</strong>天
+		<!--<br>
+		本站总访问量为 <strong><span id="busuanzi_value_site_uv"></span></strong> 次-->
+	  <br/>人间一趟，看看太阳
+      </div>
+	 <!-- <img src="https://norahfang.coding.me//media/images/font.svg">-->
+
+    </div>
+
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/love.js"></script>
+<script type="text/javascript" src="https://norahfang.coding.me//media/scripts/darkmode.js"></script>
+<script>
+var options = {
+  bottom: '64px', // default: '32px'
+  right: '32px', // default: '32px'
+  left: 'unset', // default: 'unset'
+  time: '0.5s', // default: '0.3s'
+  mixColor: '#fff', // default: '#fff'
+  backgroundColor: '#f7f7f7',  // default: '#fff'
+  buttonColorDark: '#100f2c',  // default: '#100f2c'
+  buttonColorLight: '#fff', // default: '#fff'
+  saveInCookies: false, // default: true,
+  label: '🌓', // default: ''
+  autoMatchOsTheme: true // default: true
+}
+
+const darkmode = new Darkmode(options);
+darkmode.showWidget();
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+</body>
+
+</html>
